@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css">
+    <title>Time</title>
+</head>
+<body>
+    <!-- heading starts here -->
+    <section class="heading" >
+     <div  class="container">
+         <div class="box">
+             <div class="content">
+                 <h1>Time Zone</h1>
+             </div>
+         </div>
+     </div>
+  
+    <svg>
+       <filter id="waves">
+            <feTurbulence x="0" y="0"  baseFrequency="0.02" numOctaves="5" seed="2">   
+            <animate attributeName="baseFrequency" values="0.02;0.05;0.02" dur="60s" 
+             repeatCount="indefinite"/>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="30"/>
+             
+       </filter>
+    </svg>
+
+</section>
+
+
+
+
+<section class="banner" id=ban>
+    <div class="child c_section">
+        
+        <div class="clock">
+            <div class="container">
+                <h2 id="hours">00</h2>
+                <h2 class="dot">:</h2>
+                <h2 id="minutes">00</h2>
+                <h2 class="dot">:</h2>
+                <h2 id="seconds">00</h2>
+                <span id="ampm" class="ampm">AM</span>
+            
+        </div>
+        </div>
+    </div>
+    <div class="child z_section" id="zone"> 
+            <button id="add_btn" class="btn_add" onclick="add()">
+            <span class="btn_add"></span> <span class="btn_add"></span>
+            <span class="btn_add"></span><span class="btn_add"></span>ADD ZONE
+    </button>
+    </div> 
+    <div class="s_section child" id="search_btn" > 
+        <div class="search_box"  >
+            <input type="text" id="search_text" class="search_text" placeholder="Type to search...." autocomplete="off" onkeyup="searchZones()">
+            <a href="#apple" class="search_btn"><i class="fas fa-search "></i></a>
+        </div>
+        <div class="items  scroll"  id="apple1" >
+            <ul id="list_items" class="list">
+            </ul>
+        </div>
+    </div> 
+    <div class="  c_section child" id="tym">
+        <h2 id="testing" >vratika</h2>
+        <div class="clock  t_section">
+            <div class="container">
+                <h2 id="z_hours">00</h2>
+                <h2 class="dot">:</h2>
+                <h2 id="z_minutes">00</h2>
+                <h2 class="dot">:</h2>
+                <h2 id="z_seconds">00</h2>
+                <span id="z_ampm" class="ampm">AM</span>      
+        </div>
+            </div>
+            <!-- <h2 id="testing1">vratika</h2> -->
+            <a  id="btn_add" onclick="addMoreZones()"> <i class="fas fa-plus-circle fa-3x"></i></a>       
+     </div>     
+</section>
+
+<footer class="footer_section">
+    <div>ALL RIGHTS RESERVED<span class="copyright">&copy Timezone</span></div>
+    <!-- <div class="copyright"></div> -->
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
